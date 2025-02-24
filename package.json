@@ -1,0 +1,59 @@
+{
+  "name": "smarthouse_backend",
+  "version": "1.0.0",
+  "description": "A diploma project CS2025",
+  "main": ".src/server.ts",
+  "scripts": {
+    "build": "esbuild src/server.ts --bundle --outfile=build/server.js --platform=node --format=esm --packages=external",
+    "start": "node build/server.js",
+    "dev": "tsx watch src/server.ts",
+
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:status": "drizzle-kit status",
+    "db:reset": "drizzle-kit reset",
+    "db:seed": "node scripts/seed.js"
+  },
+  "author": "Vitaliy Kulchytskyy",
+  "private": true,
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "argon2": "^0.41.1",
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.39.3",
+    "drizzle-zod": "^0.7.0",
+    "express": "^4.21.2",
+    "express-logging": "^1.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "logops": "^2.1.2",
+    "morgan": "^1.10.0",
+    "postgres": "^3.4.5",
+    "tsx": "^4.19.3",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@stylistic/eslint-plugin": "^2.1.0",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.11.16",
+    "@types/react": "^18.2.53",
+    "@types/request-ip": "^0.0.41",
+    "drizzle-kit": "^0.30.4",
+    "esbuild": "0.25.0",
+    "eslint": "^8.57.1",
+    "globals": "^16.0.0",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.1"
+  }
+}

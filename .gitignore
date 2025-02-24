@@ -1,0 +1,13 @@
+/drizzle/
+/node_modules/
+/build/
+
+/scripts/
+/logs/
+/storage/
+
+/.vscode/
+start_db.sh
+.env
+.editorconfig
+package-lock.json
